@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: olgalugaikubernetes 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: olgalugaikubernetes 
+    spec:
+      containers:
+        - name: olgalugaikubernetes 
+          image: kubernetes.azurecr.io/olgalugaikubernetes
+          ports:
+          - containerPort: 80
